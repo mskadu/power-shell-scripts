@@ -7,7 +7,7 @@
 #            Added support for -debug switch and printing of processed stats in debug mode
 #       v2.0 Adaptation (by Oscar Virot at https://gallery.technet.microsoft.com/scriptcenter/Get-DNSDebugLog-Easy-ef048bdf)
 #       v1.0 Initial Version (by ASabale at https://gallery.technet.microsoft.com/scriptcenter/Read-DNS-debug-log-and-532a8504)
-# 
+#
 # Credits
 #        ASabale - https://gallery.technet.microsoft.com/scriptcenter/Read-DNS-debug-log-and-532a8504
 #        Oscar Virot - https://gallery.technet.microsoft.com/scriptcenter/Get-DNSDebugLog-Easy-ef048bdf
@@ -51,7 +51,7 @@ function Get-DNSDebugLog
         $nTotalDiscarded = 0    # No of lines not of interest
         $nTotalEvaluated = 0    # No of lines looked at
 
-      # 
+      #
       # data sample from Windows Server 2012 R2, used for dnspattern below
       # 05/03/2019 16:05:31 0F9C PACKET  000000082A8141F0 UDP Snd 10.202.168.232  c1f8 R Q [8081   DR  NOERROR] A      (3)api(11)blahblah(3)com(0)
       #
@@ -104,7 +104,7 @@ function Get-DNSDebugLog
 
     } # end PROCESS
 
-    END 
+    END
     {
         # print summary
         Write-Debug "Summary"
@@ -130,5 +130,5 @@ function getDNSLogLines
     elseif ($PathCorrect -eq $true)
     {
         Get-Content $DNSLog | % { $_ }
-    }    
+    }
 }
