@@ -1,4 +1,4 @@
-# power-shell-scripts
+# PowerShell Scripts
 
 Power Shell Scripts is a repository of Powershell Scripts I have developed/ improved over time.
 
