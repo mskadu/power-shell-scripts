@@ -71,7 +71,7 @@ function Get-DNSDebugLog
     {
         Write-Debug "PROCESS: Starting to processing File: $DNSLog"
 
-        getDNSLogLines -DNSLog $DNSLog | % {
+        getDNSLogLines -DNSLog $DNSLog | ForEach-Object {
 
             # Overall Total
             $nTotalEvaluated = $nTotalEvaluated + 1
@@ -129,6 +129,6 @@ function getDNSLogLines
     }
     elseif ($PathCorrect -eq $true)
     {
-        Get-Content $DNSLog | % { $_ }
+        Get-Content $DNSLog | ForEach-Object { $_ }
     }
 }
